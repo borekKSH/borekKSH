@@ -1,0 +1,59 @@
+<svg width="900" height="230" viewBox="0 0 900 230" xmlns="http://www.w3.org/2000/svg" font-family="'Fira Code','SF Mono',Consolas,monospace">
+  <defs>
+    <linearGradient id="abg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0a0a"/>
+      <stop offset="100%" stop-color="#141414"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="230" fill="url(#abg)"/>
+  <rect x="0.5" y="0.5" width="899" height="229" fill="none" stroke="#2a2a2a"/>
+
+  <!-- title bar -->
+  <rect x="0" y="0" width="900" height="26" fill="#161616"/>
+  <circle cx="16" cy="13" r="4" fill="#3a3a3a"/>
+  <circle cx="30" cy="13" r="4" fill="#3a3a3a"/>
+  <circle cx="44" cy="13" r="4" fill="#3a3a3a"/>
+  <text x="450" y="17" fill="#6a6a6a" font-size="11" text-anchor="middle">dyrektor@session — agent loop</text>
+
+  <g font-size="14">
+    <text x="24" y="0" fill="#8a8a8a">
+      <tspan fill="#e2a33d">scout</tspan><tspan> &#8594; locating double-ratchet impl in BRCZAT&#8230;</tspan>
+      <animate attributeName="opacity" values="0;0;1;1;1;1;0;0" keyTimes="0;0.03;0.07;0.90;0.93;0.95;0.97;1" dur="14s" repeatCount="indefinite" begin="0s"/>
+    </text>
+  </g>
+  <g font-size="14">
+    <text x="24" y="26" fill="#c9c9c9">
+      <tspan>found </tspan><tspan fill="#e6e6e6">src/crypto/ratchet.ts:142</tspan>
+      <animate attributeName="opacity" values="0;0;1;1;1;0;0" keyTimes="0;0.13;0.17;0.90;0.93;0.95;1" dur="14s" repeatCount="indefinite" begin="0s"/>
+    </text>
+  </g>
+  <g font-size="14">
+    <text x="24" y="52" fill="#8a8a8a">
+      <tspan fill="#e2a33d">builder</tspan><tspan> &#8594; patch applied, tests written first, red seen before green</tspan>
+      <animate attributeName="opacity" values="0;0;1;1;1;0;0" keyTimes="0;0.27;0.31;0.90;0.93;0.95;1" dur="14s" repeatCount="indefinite" begin="0s"/>
+    </text>
+  </g>
+  <g font-size="14">
+    <text x="24" y="78" fill="#8a8a8a">
+      <tspan fill="#e2a33d">refuter</tspan><tspan> &#8594; re-running the suite independently, not trusting the report&#8230;</tspan>
+      <animate attributeName="opacity" values="0;0;1;1;1;0;0" keyTimes="0;0.44;0.48;0.90;0.93;0.95;1" dur="14s" repeatCount="indefinite" begin="0s"/>
+    </text>
+  </g>
+  <g font-size="14">
+    <text x="24" y="104" fill="#d9d9d9">
+      <tspan>4/4 tests &#183; </tspan><tspan fill="#e2a33d">green</tspan>
+      <animate attributeName="opacity" values="0;0;1;1;1;0;0" keyTimes="0;0.60;0.64;0.90;0.93;0.95;1" dur="14s" repeatCount="indefinite" begin="0s"/>
+    </text>
+  </g>
+  <g font-size="13">
+    <text x="24" y="136" fill="#6a6a6a">
+      <tspan>&#8618; claim requires evidence. evidence attached. </tspan><tspan fill="#e2a33d">verified, not vibes.</tspan>
+      <animate attributeName="opacity" values="0;0;1;1;1;0;0" keyTimes="0;0.72;0.76;0.90;0.93;0.95;1" dur="14s" repeatCount="indefinite" begin="0s"/>
+    </text>
+  </g>
+
+  <rect x="24" y="180" width="9" height="15" fill="#e2a33d">
+    <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+  </rect>
+  <text x="40" y="192" fill="#4a4a4a" font-size="12">$</text>
+</svg>

@@ -1,0 +1,77 @@
+<svg width="900" height="220" viewBox="0 0 900 220" xmlns="http://www.w3.org/2000/svg" font-family="'Fira Code','SF Mono',Consolas,monospace">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0a0a"/>
+      <stop offset="100%" stop-color="#151310"/>
+    </linearGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="0.4"/></filter>
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grid" width="26" height="26" patternUnits="userSpaceOnUse">
+      <path d="M26,0 L0,0 0,26" fill="none" stroke="#1c1a16" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="900" height="220" fill="url(#bg)"/>
+  <rect width="900" height="220" fill="url(#grid)">
+    <animateTransform attributeName="transform" type="translate" from="0 0" to="26 26" dur="9s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="0.5" y="0.5" width="899" height="219" fill="none" stroke="#2a2a2a"/>
+
+  <!-- coop silhouette, left -->
+  <g transform="translate(40,40)" stroke="#5a5a5a" stroke-width="1.5" fill="none">
+    <path d="M0,140 L0,70 L60,20 L120,70 L120,140 Z"/>
+    <line x1="0" y1="140" x2="120" y2="140"/>
+    <line x1="20" y1="140" x2="20" y2="95" />
+    <line x1="20" y1="95" x2="45" y2="95"/>
+    <line x1="45" y1="95" x2="45" y2="140"/>
+    <g stroke="#e2a33d" stroke-width="1">
+      <circle cx="60" cy="20" r="6" opacity="0">
+        <animate attributeName="r" values="6;38" dur="3s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.65;0" dur="3s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="60" cy="20" r="6" opacity="0">
+        <animate attributeName="r" values="6;38" dur="3s" begin="1.5s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.65;0" dur="3s" begin="1.5s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+    <circle cx="60" cy="45" r="14" stroke="#6a6a6a"/>
+    <g transform="translate(60,45)" filter="url(#glow)">
+      <g>
+        <path d="M0,0 L0,-12 L4,-9 Z" fill="#e2a33d" stroke="none"/>
+        <path d="M0,0 L12,0 L9,4 Z" fill="#6a6a6a" stroke="none"/>
+        <path d="M0,0 L0,12 L-4,9 Z" fill="#6a6a6a" stroke="none"/>
+        <path d="M0,0 L-12,0 L-9,-4 Z" fill="#6a6a6a" stroke="none"/>
+        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="5s" repeatCount="indefinite"/>
+      </g>
+      <circle r="2" fill="#e2a33d"/>
+    </g>
+  </g>
+
+  <!-- live day arc: real sunrise/sunset for Grabianow, center-right -->
+  <g transform="translate(210,0)" fill="none" stroke-linecap="round">
+    <line x1="0" y1="88" x2="480" y2="88" stroke="#2a2a2a" stroke-width="1"/>
+    <path d="M 0.0,88.0 L 8.0,88.0 L 16.0,88.0 L 24.0,88.0 L 32.0,88.0 L 40.0,88.0 L 48.0,88.0 L 56.0,88.0 L 64.0,88.0 L 72.0,88.0 L 80.0,88.0 L 88.0,88.0 L 96.0,88.0 L 104.0,88.0 L 112.0,88.0 L 120.0,88.0 L 128.0,88.0 L 136.0,82.8 L 144.0,76.2 L 152.0,69.8 L 160.0,63.6 L 168.0,57.7 L 176.0,52.1 L 184.0,46.9 L 192.0,42.2 L 200.0,38.0 L 208.0,34.4 L 216.0,31.4 L 224.0,29.0 L 232.0,27.3 L 240.0,26.3 L 248.0,26.0 L 256.0,26.4 L 264.0,27.5 L 272.0,29.3 L 280.0,31.7 L 288.0,34.8 L 296.0,38.5 L 304.0,42.8 L 312.0,47.5 L 320.0,52.8 L 328.0,58.4 L 336.0,64.4 L 344.0,70.6 L 352.0,77.0 L 360.0,83.6 L 368.0,88.0 L 376.0,88.0 L 384.0,88.0 L 392.0,88.0 L 400.0,88.0 L 408.0,88.0 L 416.0,88.0 L 424.0,88.0 L 432.0,88.0 L 440.0,88.0 L 448.0,88.0 L 456.0,88.0 L 464.0,88.0 L 472.0,88.0 L 480.0,88.0" stroke="#5a5a5a" stroke-width="1.6"/>
+    <line x1="129.7" y1="85" x2="129.7" y2="91" stroke="#4a4a4a"/>
+    <line x1="365.3" y1="85" x2="365.3" y2="91" stroke="#4a4a4a"/>
+    <text x="129.7" y="106" fill="#6a6a6a" font-size="11" text-anchor="middle">06:29</text>
+    <text x="365.3" y="106" fill="#6a6a6a" font-size="11" text-anchor="middle">18:16</text>
+    <circle cx="166.8" cy="58.6" r="5" fill="#e2a33d" filter="url(#glow)">
+      <animate attributeName="r" values="5;8;5" dur="2.2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- terminal status line, bottom -->
+  <g transform="translate(40,168)">
+    <rect x="-4" y="-14" width="820" height="24" fill="#000" opacity="0.3"/>
+    <text x="0" y="4" fill="#e2a33d" font-size="13">
+      <tspan fill="#6a6a6a">$</tspan> status --farm --code
+    </text>
+    <text x="0" y="26" fill="#d9d9d9" font-size="13">50,000+ broilers online · daylight 11h 46m (06:29–18:16) · agents: scout·builder·refuter green</text>
+    <rect x="717" y="14" width="8" height="14" fill="#e2a33d">
+      <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+</svg>

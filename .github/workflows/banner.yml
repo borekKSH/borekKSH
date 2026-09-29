@@ -1,0 +1,26 @@
+name: banner
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: generate banner.svg (live sunrise/sunset arc)
+        run: python3 scripts/farm_clock.py
+      - name: commit if changed
+        run: |
+          git config user.name "banner-bot"
+          git config user.email "actions@users.noreply.github.com"
+          if ! git diff --quiet -- assets/banner.svg; then
+            git add assets/banner.svg
+            git commit -m "chore: refresh banner (auto)"
+            git push
+          fi
