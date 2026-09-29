@@ -1,0 +1,28 @@
+name: chicken
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: generate chicken.svg (own contribution-grid animation)
+        run: python3 scripts/chicken.py
+      - name: commit if changed
+        run: |
+          git config user.name "chicken-bot"
+          git config user.email "actions@users.noreply.github.com"
+          if ! git diff --quiet -- assets/chicken.svg; then
+            git add assets/chicken.svg
+            git commit -m "chore: refresh chicken (auto)"
+            git push
+          fi
