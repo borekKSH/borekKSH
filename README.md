@@ -123,8 +123,8 @@ it lives in sheds holding 50,000+ birds.
 
 <div align="center">
 
-<img height="165" src="https://borekksh-readme-stats.vercel.app/api?username=borekKSH&show_icons=true&count_private=true&hide_border=true&bg_color=0d0d0d&title_color=E2A33D&icon_color=E2A33D&text_color=c9c9c9" />
-<img height="165" src="https://borekksh-readme-stats.vercel.app/api/top-langs/?username=borekKSH&layout=compact&hide_border=true&bg_color=0d0d0d&title_color=E2A33D&text_color=c9c9c9" />
+<img height="165" src="https://borekksh-readme-stats.vercel.app/api?username=borekKSH&show_icons=true&count_private=true&hide_border=true&bg_color=0d0d0d&title_color=E2A33D&icon_color=E2A33D&text_color=c9c9c9&cache_bust=20260929b" />
+<img height="165" src="https://borekksh-readme-stats.vercel.app/api/top-langs/?username=borekKSH&layout=compact&hide_border=true&bg_color=0d0d0d&title_color=E2A33D&text_color=c9c9c9&cache_bust=20260929b" />
 
 <img src="assets/chicken.svg" width="100%" alt="a chick eating grains across the real contribution grid" />
 <sub>own animation, not a borrowed widget: walks the real contribution calendar and recomputes every 6 hours by <code>.github/workflows/chicken.yml</code></sub>
