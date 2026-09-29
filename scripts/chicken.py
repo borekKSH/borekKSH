@@ -60,11 +60,14 @@ def last_n_weeks_grid(by_date, weeks=WEEKS):
 
 
 def boustrophedon_path(weeks=WEEKS):
-    """Kolejnosc odwiedzin (tydzien,dzien): w dol kolumny, w prawo, w gore, w prawo..."""
+    """Kolejnosc odwiedzin (tydzien,dzien): calym wierszem (dniem tygodnia)
+    przez wszystkie tygodnie w prawo, potem nizej i w lewo - jak maszyna do
+    pisania. Dlugie, plynne odcinki poziome pasujace do szerokiej planszy,
+    zamiast szybkiego skakania gora-dol w waskich kolumnach."""
     order = []
-    for w in range(weeks):
-        days = range(7) if w % 2 == 0 else range(6, -1, -1)
-        for d in days:
+    for d in range(7):
+        weeks_range = range(weeks) if d % 2 == 0 else range(weeks - 1, -1, -1)
+        for w in weeks_range:
             order.append((w, d))
     return order
 
@@ -111,6 +114,12 @@ def build_svg(grid, order, generated_at) -> str:
     keytimes_motion = ";".join(f"{i/(n-1):.5f}" for i in range(n))
     dur = n * SEC_PER_CELL
 
+    # kierunek jazdy: wiersz parzysty -> w prawo (skala 1,1), nieparzysty -> w lewo (skala -1,1)
+    # zeby dziob nie patrzyl w prawo, gdy kurczak faktycznie idzie w lewo
+    row_starts = [r * WEEKS / n for r in range(7)]
+    flip_keytimes = ";".join(f"{t:.5f}" for t in row_starts)
+    flip_values = ";".join("1,1" if r % 2 == 0 else "-1,1" for r in range(7))
+
     eaten = sum(1 for w in range(WEEKS) for d in range(7) if grid[w][d] > 0)
     total = WEEKS * 7
 
@@ -122,13 +131,18 @@ def build_svg(grid, order, generated_at) -> str:
   {''.join(grains_svg)}
 
   <g>
-    <ellipse rx="5.5" ry="4.5" fill="#e6e6e6" stroke="#8a8a8a" stroke-width="0.8"/>
-    <circle cx="3.2" cy="-2.4" r="2.6" fill="#e6e6e6" stroke="#8a8a8a" stroke-width="0.8"/>
-    <path d="M6.2,-2.4 L9.4,-1.7 L6.2,-1.0 Z" fill="#e2a33d"/>
-    <circle cx="2.6" cy="-3.0" r="0.55" fill="#141414"/>
-    <path d="M2.5,1.2 C1.8,2.6 4.2,2.6 3.4,1.2" fill="none" stroke="#e2a33d" stroke-width="0.9"/>
     <animateMotion path="{motion_path}" keyTimes="{keytimes_motion}" dur="{dur:.2f}s" repeatCount="indefinite" calcMode="linear"/>
-    <animateTransform attributeName="transform" type="rotate" values="-6;6;-6" keyTimes="0;0.5;1" dur="0.3s" repeatCount="indefinite" additive="sum"/>
+    <g>
+      <animateTransform attributeName="transform" type="scale" values="{flip_values}" keyTimes="{flip_keytimes}" dur="{dur:.2f}s" repeatCount="indefinite" calcMode="discrete"/>
+      <g>
+        <animateTransform attributeName="transform" type="rotate" values="-6;6;-6" keyTimes="0;0.5;1" dur="0.4s" repeatCount="indefinite"/>
+        <ellipse rx="5.5" ry="4.5" fill="#e6e6e6" stroke="#8a8a8a" stroke-width="0.8"/>
+        <circle cx="3.2" cy="-2.4" r="2.6" fill="#e6e6e6" stroke="#8a8a8a" stroke-width="0.8"/>
+        <path d="M6.2,-2.4 L9.4,-1.7 L6.2,-1.0 Z" fill="#e2a33d"/>
+        <circle cx="2.6" cy="-3.0" r="0.55" fill="#141414"/>
+        <path d="M2.5,1.2 C1.8,2.6 4.2,2.6 3.4,1.2" fill="none" stroke="#e2a33d" stroke-width="0.9"/>
+      </g>
+    </g>
   </g>
 
   <g transform="translate({PAD},{H-16})">
