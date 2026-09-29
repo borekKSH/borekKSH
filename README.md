@@ -38,7 +38,7 @@ connects them is that I'd rather build the tool than wait for someone to sell me
 | runtime / deploy | data & messaging | tooling |
 |---|---|---|
 | Cloudflare Workers · Pages · R2 · D1 | Fastify · libsodium | Wrangler |
-| Fabric (MC 1.21) · Capacitor (iOS) | Home Assistant (sensor ingest) | ESLint · tsc --noEmit |
+| Fabric (MC 26.2) · Capacitor (iOS) | Home Assistant (sensor ingest) | ESLint · tsc --noEmit |
 
 </div>
 
