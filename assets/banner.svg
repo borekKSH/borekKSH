@@ -53,12 +53,12 @@
   <!-- live day arc: real sunrise/sunset for Grabianow, center-right -->
   <g transform="translate(210,0)" fill="none" stroke-linecap="round">
     <line x1="0" y1="88" x2="480" y2="88" stroke="#2a2a2a" stroke-width="1"/>
-    <path d="M 0.0,88.0 L 8.0,88.0 L 16.0,88.0 L 24.0,88.0 L 32.0,88.0 L 40.0,88.0 L 48.0,88.0 L 56.0,88.0 L 64.0,88.0 L 72.0,88.0 L 80.0,88.0 L 88.0,88.0 L 96.0,88.0 L 104.0,88.0 L 112.0,88.0 L 120.0,88.0 L 128.0,88.0 L 136.0,88.0 L 144.0,81.8 L 152.0,74.7 L 160.0,67.9 L 168.0,61.3 L 176.0,55.0 L 184.0,49.2 L 192.0,43.9 L 200.0,39.2 L 208.0,35.1 L 216.0,31.8 L 224.0,29.1 L 232.0,27.3 L 240.0,26.2 L 248.0,26.0 L 256.0,26.6 L 264.0,28.0 L 272.0,30.2 L 280.0,33.2 L 288.0,36.9 L 296.0,41.3 L 304.0,46.2 L 312.0,51.8 L 320.0,57.8 L 328.0,64.2 L 336.0,70.9 L 344.0,77.9 L 352.0,85.0 L 360.0,88.0 L 368.0,88.0 L 376.0,88.0 L 384.0,88.0 L 392.0,88.0 L 400.0,88.0 L 408.0,88.0 L 416.0,88.0 L 424.0,88.0 L 432.0,88.0 L 440.0,88.0 L 448.0,88.0 L 456.0,88.0 L 464.0,88.0 L 472.0,88.0 L 480.0,88.0" stroke="#5a5a5a" stroke-width="1.6"/>
-    <line x1="137.0" y1="85" x2="137.0" y2="91" stroke="#4a4a4a"/>
-    <line x1="355.4" y1="85" x2="355.4" y2="91" stroke="#4a4a4a"/>
-    <text x="137.0" y="106" fill="#6a6a6a" font-size="11" text-anchor="middle">06:51</text>
-    <text x="355.4" y="106" fill="#6a6a6a" font-size="11" text-anchor="middle">17:46</text>
-    <circle cx="341.0" cy="75.3" r="5" fill="#e2a33d" filter="url(#glow)">
+    <path d="M 0.0,88.0 L 8.0,88.0 L 16.0,88.0 L 24.0,88.0 L 32.0,88.0 L 40.0,88.0 L 48.0,88.0 L 56.0,88.0 L 64.0,88.0 L 72.0,88.0 L 80.0,88.0 L 88.0,88.0 L 96.0,88.0 L 104.0,88.0 L 112.0,88.0 L 120.0,88.0 L 128.0,88.0 L 136.0,88.0 L 144.0,82.2 L 152.0,75.2 L 160.0,68.2 L 168.0,61.6 L 176.0,55.3 L 184.0,49.4 L 192.0,44.1 L 200.0,39.3 L 208.0,35.2 L 216.0,31.8 L 224.0,29.1 L 232.0,27.3 L 240.0,26.2 L 248.0,26.0 L 256.0,26.6 L 264.0,28.1 L 272.0,30.3 L 280.0,33.3 L 288.0,37.1 L 296.0,41.5 L 304.0,46.5 L 312.0,52.1 L 320.0,58.2 L 328.0,64.7 L 336.0,71.5 L 344.0,78.5 L 352.0,85.6 L 360.0,88.0 L 368.0,88.0 L 376.0,88.0 L 384.0,88.0 L 392.0,88.0 L 400.0,88.0 L 408.0,88.0 L 416.0,88.0 L 424.0,88.0 L 432.0,88.0 L 440.0,88.0 L 448.0,88.0 L 456.0,88.0 L 464.0,88.0 L 472.0,88.0 L 480.0,88.0" stroke="#5a5a5a" stroke-width="1.6"/>
+    <line x1="137.6" y1="85" x2="137.6" y2="91" stroke="#4a4a4a"/>
+    <line x1="354.6" y1="85" x2="354.6" y2="91" stroke="#4a4a4a"/>
+    <text x="137.6" y="106" fill="#6a6a6a" font-size="11" text-anchor="middle">06:52</text>
+    <text x="354.6" y="106" fill="#6a6a6a" font-size="11" text-anchor="middle">17:43</text>
+    <circle cx="48.9" cy="88.0" r="5" fill="#8a8a8a" filter="url(#glow)">
       <animate attributeName="r" values="5;8;5" dur="2.2s" repeatCount="indefinite"/>
     </circle>
   </g>
@@ -69,7 +69,7 @@
     <text x="0" y="4" fill="#e2a33d" font-size="13">
       <tspan fill="#6a6a6a">$</tspan> status --farm --code
     </text>
-    <text x="0" y="26" fill="#d9d9d9" font-size="13">50,000+ broilers online · daylight 10h 55m (06:51–17:46) · agents: scout·builder·refuter green</text>
+    <text x="0" y="26" fill="#d9d9d9" font-size="13">50,000+ broilers online · daylight 10h 51m (06:52–17:43) · agents: scout·builder·refuter green</text>
     <rect x="717" y="14" width="8" height="14" fill="#e2a33d">
       <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
     </rect>
