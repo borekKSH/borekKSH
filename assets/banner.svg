@@ -58,7 +58,7 @@
     <line x1="354.6" y1="85" x2="354.6" y2="91" stroke="#4a4a4a"/>
     <text x="137.6" y="106" fill="#6a6a6a" font-size="11" text-anchor="middle">06:52</text>
     <text x="354.6" y="106" fill="#6a6a6a" font-size="11" text-anchor="middle">17:43</text>
-    <circle cx="48.9" cy="88.0" r="5" fill="#8a8a8a" filter="url(#glow)">
+    <circle cx="319.0" cy="57.4" r="5" fill="#e2a33d" filter="url(#glow)">
       <animate attributeName="r" values="5;8;5" dur="2.2s" repeatCount="indefinite"/>
     </circle>
   </g>
